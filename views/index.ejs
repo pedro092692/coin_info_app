@@ -6,7 +6,16 @@
     <h1>Top crypto currencies</h1>
     <!-- main grip -->
     <div>
-        <%- include('partials/card.ejs') %>
+        <!-- iterater over each coin and render coin card -->
+        <% topCoins.forEach((coin, i)=>{ %>
+            <%- include('partials/card.ejs', 
+            {
+                name: coin.name,
+                price: coinsPrices[i].toFixed(2),
+                img: coinsImgURL[i],
+            }) 
+            %>
+        <% }) %>
     </div>
 
 </main>
