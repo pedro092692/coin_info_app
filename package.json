@@ -1,0 +1,25 @@
+{
+  "name": "coin_info_app",
+  "version": "1.0.0",
+  "description": "this app show cryptocurrencies info using coinpaprika api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedro092692/coin_info_app.git"
+  },
+  "keywords": [
+    "crytp",
+    "node",
+    "expressjs",
+    "ejs"
+  ],
+  "author": "pedro bastidas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedro092692/coin_info_app/issues"
+  },
+  "homepage": "https://github.com/pedro092692/coin_info_app#readme"
+}
