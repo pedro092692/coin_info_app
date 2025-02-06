@@ -11,8 +11,9 @@
             <%- include('partials/card.ejs', 
             {
                 name: coin.name,
-                price: coinsPrices[i].toFixed(2),
+                price: coinsPrice[i].toFixed(2),
                 img: coinsImgURL[i],
+                id: coin.id
             }) 
             %>
         <% }) %>
