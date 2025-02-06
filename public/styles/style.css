@@ -1,3 +1,9 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /* navbar custom styles */
 nav, footer{
     background-color: #F5F5F5;
@@ -26,3 +32,10 @@ nav form img{
  }
 
 /* end footer styles */
+
+/* 404 error page */
+.bigText{
+    font-size: 56px;
+}
+
+/* end 404 error page */
