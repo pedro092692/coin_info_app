@@ -1,57 +1,75 @@
 <%- include('partials/header.ejs') %>
     <!-- main content -->
-    <main>
-        <!-- main info -->
-         <div>
-            <!-- name and coin img -->
+    <main class="py-2 px-md-5 px-3 d-flex flex-grow-1 flex-column gap-3 mb-4 position-relative">
+        <div class="grid">
+            <!-- main info -->
             <div>
-                <img src="<%= logoURL %>" alt="coin img">
-                <!-- coin name -->
-                <h1><%= name %></h1>
+                <!-- name and coin img -->
+                <div class="d-flex gap-3 align-items-center justify-content-center justify-content-md-start">
+                    <img src="<%= logoURL %>" alt="coin img" class="coinImg">
+                    <!-- coin name -->
+                    <h1 id="coin-name"><%= name %></h1>
+                </div>
+                <!-- info -->
+                <div>
+                    <div class="d-flex gap-2">
+                        <!-- symbol -->
+                        <p class="fs-2">Symbol</p>
+                        <p class="fs-2 fw-bold"><%= symbol %></p>
+                    </div>
+                    <!-- coin description -->
+                    <p class="fw-light coin-description">
+                        <%= description %>
+                    </p>
+                    <% if(!description){ %>
+                        <p class="fw-bold fs-5">No info</p>
+                    <% } %>  
+                    <!-- coin rank -->
+                    <div class="d-flex gap-2">
+                        <p class="fs-2">Rank</p>
+                        <p class="fs-2 fw-bold">#<%= rank %></p>
+                    </div>
+                </div>
             </div>
-            <!-- info -->
-            <div>
-                <!-- symbol -->
-                <h2>Symbol</h2>
-                <p><%= symbol %></p>
-                <!-- coin description -->
-                <p>
-                    <%= description %>
-                </p> 
-                <!-- coin rank -->
-                <h2>Rank</h2>
-                <p>#<%= rank %></p>
+            <!-- end main info  -->
+
+            <!-- proof info -->
+            <div class="w-100">
+                <p class="fs-2">Proof type</p>
+                <p class="fw-bold fs-5"><%= proofType %></p>
+                <% if(!proofType){ %>
+                    <p class="fw-bold fs-5">No info</p>
+                <% } %>    
+                <!-- Algorithm -->
+                <p class="fs-2">Has Algorithm</p>
+                <p class="fw-bold fs-5"><%= hashAlgorithm %></p>
+                <% if(!hashAlgorithm){ %>
+                    <p class="fw-bold fs-5">No info</p>
+                <% } %> 
             </div>
-         </div>
-        <!-- end main info  -->
-
-        <!-- proof info -->
-        <div>
-            <h2>Proof type</h2>
-            <p><%= proofType %></p>
-             <!-- Algorithm -->
-            <h2>Has Algorithm</h2>
-            <p><%= hashAlgorithm %></p>
+            <!-- team -->
+            <div class="w-100">
+                <h2>Team</h2>
+                <ul class="fs-5">
+                    <% if(team.length === 0){ %>
+                        <p class="fw-bold fs-5">No info</p>
+                    <% }else{ %>
+                        <% team.slice(0, 15).forEach((member)=>{ %>
+                            <li><%= member.name  %>, <%= member.position %></li>
+                        <% }) %>
+                    <% } %>
+                </ul>
+            </div>
+            <!-- whitepaper -->
+            <div class="w-100">
+                <h2>Whitepaper</h2>
+                <a href="<%= whitePaperLink %>" class="link-secondary fs-5">
+                    Dowload PDF
+                </a>
+            </div>
         </div>
-        <!-- team -->
-        <div>
-            <h2>Team</h2>
-            <ul>
-                <% team.forEach((member)=>{ %>
-                    <li><%= member.name  %>, <%= member.position %></li>
-                <% }) %>
-            </ul>
-        </div>
-        <!-- whitepaper -->
-        <div>
-            <h2>Whitepaper</h2>
-            <a href="<%= whitePaperLink %>">
-                <p>Dowload PDF</p>
-            </a>
-        </div>
-
         <!-- background -->
-        <img src="<%= logoURL %>" alt="coin img"> 
+        <img src="<%= logoURL %>" alt="coin img" class="position-absolute d-md-block d-none coin-bg">
     </main>
     <!-- end main content -->
 <%- include('partials/footer.ejs') %>

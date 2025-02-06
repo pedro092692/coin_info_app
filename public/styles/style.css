@@ -4,6 +4,11 @@ body{
     min-height: 100vh;
 }
 
+p, h1, h2{
+    margin: 0;
+    padding: 0;
+}
+
 /* navbar custom styles */
 nav, footer{
     background-color: #F5F5F5;
@@ -57,6 +62,31 @@ main .grid{
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 32px;
 }
+
+/* main coin info page */
+main .coinImg{
+    height: 40px;
+}
+
+#coin-name{
+   font-size: 56px;
+}
+
+
+main .coin-description{
+    font-size: 32px;
+}
+
+main .coin-bg{
+    bottom: 0;
+    right: 0;
+    width: 640px;
+    opacity: 0.3;
+}
+/* end coin info page */
+
+
+
 /* end main grid */
 
 /* 404 error page */

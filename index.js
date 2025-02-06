@@ -83,6 +83,10 @@ app.get('/', (req, res)=>{
 
 });
 
+app.get('/coin', (req, res)=>{
+    res.render('coin-test.ejs');
+});
+
 //request function 
 async function getRequest(endPoint){
     try{
