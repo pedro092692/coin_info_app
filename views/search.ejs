@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %>
+    <main class="px-5 d-flex flex-grow-1 flex-column ">
+        <div class="mb-4 rounded-3">
+            <div class="container-fluid py-3">
+                <h1 class="display-5 fw-bold fs-2">Search results</h1>
+                <div class="list-group w-auto">
+                    <% if(searchResult.length > 0){ %>
+                        <% searchResult.forEach((result)=>{ %>
+                            <a href="/coin/<%= result.id  %>" class="list-group-item list-group-item-action d-flex gap-3 " aria-current="true">
+                                <div class="d-flex gap-2 w-100 justify-content-between">
+                                    <div>
+                                        <h6 class="mb-0 text-capitalize fs-4"><%= result.name %></h6>
+                                    </div>
+                                </div>
+                            </a>
+                        <% }) %>
+                    <% }else{ %>
+                        <p>Sorry, not search results.</p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<%- include('partials/footer.ejs') %>
