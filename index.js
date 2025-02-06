@@ -48,13 +48,26 @@ app.get('/test', async(req, res)=>{
     }
 });
 
-app.get('/coin/:id', (req, res)=>{
+app.get('/coin/:id', async(req, res)=>{
     const coinId = req.params.id;
-    console.log(coinId);
-    res.render('coin.ejs');
+    const coinInfo = await getRequest(`coins/${coinId}`);
+    if(coinInfo){
+        res.render('coin.ejs', {
+            name: coinInfo.name,
+            symbol: coinInfo.symbol,
+            rank: coinInfo.rank,
+            logoURL: coinInfo.logo,
+            description: coinInfo.description,
+            proofType: coinInfo.proof_type,
+            hashAlgorithm: coinInfo.hash_algorithm,
+            team: coinInfo.team,
+            whitePaperLink: coinInfo.whitepaper.link,
+        });
+    }else{
+        res.sendStatus(404);
+    }
+    
 });
-
-
 
 
 

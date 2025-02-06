@@ -5,21 +5,22 @@
          <div>
             <!-- name and coin img -->
             <div>
-                <img src="" alt="coin img">
+                <img src="<%= logoURL %>" alt="coin img">
                 <!-- coin name -->
-                <h1>coin name</h1>
+                <h1><%= name %></h1>
             </div>
             <!-- info -->
             <div>
                 <!-- symbol -->
-                <h2>symbol: SSS</h2>
+                <h2>Symbol</h2>
+                <p><%= symbol %></p>
                 <!-- coin description -->
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat tempore ratione libero eaque soluta mollitia, totam adipisci similique 
-                    deleniti nihil atque rerum explicabo exercitationem deserunt, eius maiores enim! Itaque, adipisci.
+                    <%= description %>
                 </p> 
                 <!-- coin rank -->
-                <h2>Rank #9</h2>
+                <h2>Rank</h2>
+                <p>#<%= rank %></p>
             </div>
          </div>
         <!-- end main info  -->
@@ -27,28 +28,30 @@
         <!-- proof info -->
         <div>
             <h2>Proof type</h2>
-            <p>Prof type</p>
+            <p><%= proofType %></p>
              <!-- Algorithm -->
-            <h2>Proof type</h2>
-            <p>SHA256</p>
+            <h2>Has Algorithm</h2>
+            <p><%= hashAlgorithm %></p>
         </div>
         <!-- team -->
         <div>
             <h2>Team</h2>
             <ul>
-                <li>Team integrant</li>
+                <% team.forEach((member)=>{ %>
+                    <li><%= member.name  %>, <%= member.position %></li>
+                <% }) %>
             </ul>
         </div>
         <!-- whitepaper -->
         <div>
             <h2>Whitepaper</h2>
-            <a href="">
+            <a href="<%= whitePaperLink %>">
                 <p>Dowload PDF</p>
             </a>
         </div>
 
         <!-- background -->
-        <img src="" alt="coin img"> 
+        <img src="<%= logoURL %>" alt="coin img"> 
     </main>
     <!-- end main content -->
 <%- include('partials/footer.ejs') %>
