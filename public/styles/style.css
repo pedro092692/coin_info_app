@@ -78,4 +78,10 @@ main .grid{
     main .coin-card{
        width: 300px;
     }
+    .broken-coin{
+        width: 256px;
+    }
+    footer{
+        height: auto;
+     }
 }
