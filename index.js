@@ -43,8 +43,9 @@ app.get('/', async(req, res)=>{
             }
         );
     }else{
-        console.log('There was an error');
-        res.sendStatus(500);
+        res.status(404).render('partials/404.ejs', {
+            error: 'quota exceeded wait one hour'
+        });
     }
 });
 
@@ -64,7 +65,9 @@ app.get('/coin/:id', async(req, res)=>{
             whitePaperLink: coinInfo.whitepaper.link,
         });
     }else{
-        res.status(404).render('partials/404.ejs');
+        res.status(404).render('partials/404.ejs', {
+            error: 'quota exceeded wait one hour'
+        });
     }
 });
 
@@ -78,7 +81,9 @@ app.get('/global-info', async(req, res)=>{
             volume: global_info.volume_24h_ath_value.toLocaleString('en-US', {style: 'currency', currency: 'USD'}),
         });
     }else{
-        res.status(404).render('partials/404.ejs');
+        res.status(404).render('partials/404.ejs', {
+            error: 'quota exceeded wait one hour'
+        });
     }
 });
 
@@ -90,7 +95,9 @@ app.get('/glossary', async(req, res)=>{
             termsInfo: termsInfo.slice(0, 50)
         });
     }else{
-        res.status(404).render('404.ejs');
+        res.status(404).render('partials/404.ejs', {
+            error: 'quota exceeded wait one hour'
+        });
     }
 });
 
@@ -102,7 +109,9 @@ app.post('/search', async(req, res)=>{
             searchResult: searchResult.currencies,
         });
     }else{
-        res.status(404).render('404.ejs');
+        res.status(404).render('partials/404.ejs', {
+            error: 'quota exceeded wait one hour'
+        });
     }
 });
 
