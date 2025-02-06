@@ -1,30 +1,32 @@
-<nav>
+<nav class="py-3 px-5 shadow d-flex justify-content-between align-items-center">
     <!-- container logo and menu -->
-        <div>
-        <!-- app logo --> 
-        <div>
-            <a href="/"><img src="/images/logo_app.svg" alt="app logo"></a>
+        <div class="d-flex">
+            <!-- app logo --> 
+            <div>
+                <a href="/"><img src="/images/logo_app.svg" alt="app logo"></a>
+            </div>
+            <!-- app menu -->
+            <ul class="d-flex text-capitalize" id="listMenu">
+                <a href="">
+                    <li>exchanges</li>
+                </a>
+                <a href="">
+                    <li>market info</li>
+                </a>
+                <a href="">
+                    <li>terms glossary</li>
+                </a>
+            </ul>
         </div>
-        <!-- app menu -->
-        <ul>
-            <a href="">
-                <li>exchanges</li>
-            </a>
-            <a href="">
-                <li>market info</li>
-            </a>
-            <a href="">
-                <li>terms glossary</li>
-            </a>
-        </ul>
-    </div>
     <!-- end container logo and menu -->
 
     <!-- search input -->
     <div>
         <form action="">
-            <input type="search" name="query" id="query" placeholder="search">
-            <img src="/images/search_icon.svg" alt="search icon">
+            <div class="position-relative">
+                <input type="text" name="query" id="query" placeholder="search" class="form-control">
+                <img src="/images/search_icon.svg" alt="search icon" class="position-absolute">
+            </div>
         </form>
     </div>
 </nav>

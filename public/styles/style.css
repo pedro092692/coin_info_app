@@ -1,0 +1,20 @@
+/* navbar custom styles */
+nav{
+    background-color: #F5F5F5;
+}
+#listMenu{
+    list-style: none;
+    gap: 16px;
+    font-size: 18px;
+}
+
+#listMenu a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav form img{
+    height: 20px;
+    top: 8px;
+    right: 10px;
+}
