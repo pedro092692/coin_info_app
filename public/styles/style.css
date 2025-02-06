@@ -66,3 +66,16 @@ main .grid{
 
 /* end 404 error page */
 
+/* media queries */
+@media (max-width: 850px){
+    main h1{
+        font-size: 32px;
+        text-align: center;
+    }
+    main .grid{
+        place-items: center;
+    }
+    main .coin-card{
+       width: 300px;
+    }
+}
