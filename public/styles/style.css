@@ -33,9 +33,22 @@ nav form img{
 
 /* end footer styles */
 
+/* coin card styles */
+
+main .coin-card{
+    background-color: #FDFDFD;
+    height: 560px;
+    width: 400px;
+}
+
+main .coin-card img{
+    object-fit: contain;
+}
+
 /* 404 error page */
 .bigText{
     font-size: 56px;
 }
 
 /* end 404 error page */
+

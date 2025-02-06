@@ -1,15 +1,15 @@
 <!-- coin info card -->
-<div>
+<div class="py-2 px-4 d-flex flex-column shadow-sm coin-card">
     <!-- coin name -->
-    <h2><%= name %></h2>
+    <h2 class="fw-bold"><%= name %></h2>
     <!-- coin price -->
-    <p>$<%= price %></p>
+    <h2>$<%= price %></h2>
     <!-- coin img  -->
-    <img src="<%= img %>" alt="coin logo">
+    <img src="<%= img %>" alt="coin logo" class="flex-grow-1">
     <!-- more info button  -->
     <div>
-        <a href="/coin/<%= id %>">
-            <button>More info</button>
+        <a href="/coin/<%= id %>" class="btn btn-success w-100 fs-3 fw-bold">
+            More info
         </a>
     </div> 
 </div>
