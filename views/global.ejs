@@ -1,0 +1,49 @@
+<%- include('partials/header.ejs') %>
+    <main class="px-5 d-flex flex-grow-1 flex-column align-items-center">
+        <div class="mb-4 rounded-3">
+            <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Cryptocurrencies Global Info</h1>
+            <p class="col-md-8 fs-4">A concise summary of the current state and future prospects of the global cryptocurrency market.</p>
+                <div class="list-group w-auto">
+                    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <img src="/images/dollar.svg" alt="twbs" width="32" height="32" class="flex-shrink-0">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                        <h6 class="mb-0 text-capitalize">market cap usd</h6>
+                        <p class="mb-0 opacity-75"><%= market_cap %></p>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <img src="/images/btc.svg" alt="twbs" width="32" height="32" class="flex-shrink-0">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                        <h6 class="mb-0 text-capitalize">bitcoin dominance percentage</h6>
+                        <p class="mb-0 opacity-75">%<%= bitcoinPercent %></p>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <img src="/images/chart_1.svg" alt="twbs" width="32" height="32" class="flex-shrink-0">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                        <h6 class="mb-0 text-capitalize">cryptocurrencies number</h6>
+                        <p class="mb-0 opacity-75"><%= crytoNumber %></p>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                        <img src="/images/chart_2.svg" alt="twbs" width="32" height="32" class="flex-shrink-0">
+                        <div class="d-flex gap-2 w-100 justify-content-between">
+                            <div>
+                            <h6 class="mb-0 text-capitalize">volume 24h usd</h6>
+                            <p class="mb-0 opacity-75"><%= volume %></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                </div>
+        </div>
+    </main>
+
+<%- include('partials/footer.ejs') %>
