@@ -64,9 +64,8 @@ app.get('/coin/:id', async(req, res)=>{
             whitePaperLink: coinInfo.whitepaper.link,
         });
     }else{
-        res.sendStatus(404);
+        res.status(404).render('partials/404.ejs');
     }
-    
 });
 
 
@@ -93,6 +92,12 @@ async function getRequest(endPoint){
         console.error('Faile to make request:', error.message);
     }
 }
+
+// 404 Middleware
+app.use((req, res, next) => {
+    res.status(404).render('partials/404.ejs');
+});
+
 
 // app listen
 app.listen(port, ()=>{
