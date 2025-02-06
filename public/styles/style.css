@@ -36,14 +36,28 @@ nav form img{
 /* coin card styles */
 
 main .coin-card{
-    background-color: #FDFDFD;
+    background-color: #F5F5F5;
     height: 560px;
-    width: 400px;
+    width: 350px;
 }
 
 main .coin-card img{
     object-fit: contain;
 }
+
+/* main grid */
+main h1{
+    font-weight: 100;
+    font-size: 56px;
+    margin-bottom: 16px;
+}
+
+main .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 32px;
+}
+/* end main grid */
 
 /* 404 error page */
 .bigText{

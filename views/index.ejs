@@ -1,11 +1,11 @@
 <%- include('partials/header.ejs') %>
 
 <!-- main content -->
-<main class="py-2 px-5">
+<main class="py-2 px-5 d-flex flex-column gap-3 mb-4">
     <!-- title -->
-    <h1>Top crypto currencies</h1>
+    <h1 class="text-capitalize">Top crypto currencies</h1>
     <!-- main grip -->
-    <div>
+    <div class="grid">
         <!-- iterater over each coin and render coin card -->
         <% topCoins.forEach((coin, i)=>{ %>
             <%- include('partials/card.ejs', 
