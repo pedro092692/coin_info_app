@@ -1,5 +1,5 @@
 /* navbar custom styles */
-nav{
+nav, footer{
     background-color: #F5F5F5;
 }
 #listMenu{
@@ -18,3 +18,11 @@ nav form img{
     top: 8px;
     right: 10px;
 }
+/* end navbar styles */
+
+/* footer styles  */
+ footer{
+    height: 100px;
+ }
+
+/* end footer styles */
