@@ -49,6 +49,7 @@ app.get('/', async(req, res)=>{
     }
 });
 
+// coin info route
 app.get('/coin/:id', async(req, res)=>{
     const coinId = req.params.id;
     const coinInfo = await getRequest(`coins/${coinId}`);
@@ -71,6 +72,7 @@ app.get('/coin/:id', async(req, res)=>{
     }
 });
 
+// global info route
 app.get('/global-info', async(req, res)=>{
     const global_info = await getRequest('global');
     if(global_info){
@@ -87,6 +89,7 @@ app.get('/global-info', async(req, res)=>{
     }
 });
 
+//glossary info route
 app.get('/glossary', async(req, res)=>{
     const termsInfo = await getRequest('tags');
     
@@ -101,6 +104,8 @@ app.get('/glossary', async(req, res)=>{
     }
 });
 
+
+//search post route
 app.post('/search', async(req, res)=>{
     const query = req.body.query;
     const searchResult = await getRequest(`search?q=${query}`);
